@@ -48,7 +48,7 @@ extension LiveKitKrispNoiseFilter: AudioCustomProcessingDelegate {
         }
     }
 
-    public func audioProcessingProcess(audioBuffer: LiveKit.LKAudioBuffer) {
+    open func audioProcessingProcess(audioBuffer: LiveKit.LKAudioBuffer) {
         guard _state.isEnabled else { return }
 
         for channel in 0 ..< audioBuffer.channels {
