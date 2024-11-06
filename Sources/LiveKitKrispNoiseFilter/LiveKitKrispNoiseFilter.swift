@@ -6,7 +6,7 @@ enum LiveKitKrispNoiseFilterError: Error {
     case globalInitializationFailed
 }
 
-public class LiveKitKrispNoiseFilter {
+open class LiveKitKrispNoiseFilter {
     public var isEnabled: Bool {
         get { _state.isEnabled }
         set { _state.mutate { $0.isEnabled = newValue } }
